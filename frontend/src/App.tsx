@@ -4,8 +4,12 @@ import { BookingsPage } from "./components/Bookings/BookingsPage";
 import { UsersPage } from "./components/Users/UsersPage";
 import { UserPicker } from "./components/Users/UserPicker";
 import { Icon } from '@iconify/react';
+import { useAppState } from "./state/AppStateContext";
 
 function App() {
+  const { bookables } = useAppState()
+
+  console.log(bookables)
   return (
     <Router>
       <div className="App">
